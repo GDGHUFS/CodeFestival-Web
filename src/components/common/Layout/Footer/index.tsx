@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className={styles.root}>
       <p className={styles.license}>
-        {METADATA.address} |&nbsp;
+        <span dangerouslySetInnerHTML={{ __html: METADATA.address }} /> |&nbsp;
         <a href={`mailto:${METADATA.email}`}>{METADATA.email}</a>
         <br />© GDG on Campus HUFS. All Rights Reserved.
       </p>

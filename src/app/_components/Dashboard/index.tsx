@@ -12,6 +12,7 @@ const Dashboard = () => {
   const currentTime = new Date();
   const registrationDeadline = new Date(FESTIVAL.current.registrationDeadline);
   const registrationClosed = currentTime > registrationDeadline;
+  const registrationLink = FESTIVAL.current.registrationLink;
   const competitionDate = new Date(FESTIVAL.current.date).toLocaleDateString('en-GB', {
     day: 'numeric',
     month: 'long',
@@ -28,14 +29,18 @@ const Dashboard = () => {
       <section className={styles.root}>
         <h1 className={styles.branding}>HUFS CodeFestival</h1>
         <p className={styles.time}>{competitionDate}</p>
-        {registrationClosed ? (
+        {!registrationLink ? (
+          <span className={clsx(styles.registerLink, styles.registerClosed)}>
+            Registration Not Yet Open
+          </span>
+        ) : registrationClosed ? (
           <span className={clsx(styles.registerLink, styles.registerClosed)}>
             Registration Closed
           </span>
         ) : (
           <a
             className={styles.registerLink}
-            href={FESTIVAL.current.registrationLink}
+            href={registrationLink}
             target="_blank"
           >
             Registration

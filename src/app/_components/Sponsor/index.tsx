@@ -24,7 +24,7 @@ const Sponsor = ({ className, ...props }: SponsorProps) => {
       </div>
       <div className={styles.organization}>
         <p className={styles.title}>Organized by</p>
-        <a href="https://gdghufs.com/" target="_blank">
+        <a href="https://gdg.hufs.ac.kr/" target="_blank">
           <Image
             className={styles.logo}
             src="/static/images/ci_gdghufs.webp"

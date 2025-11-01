@@ -8,7 +8,7 @@ export const faq: FaqItem[] = [
   {
     id: 'item-1',
     question: '대회 신청은 어떻게 하면 되나요?',
-    answer: '대회 홈페이지(https://codefestival.gdghufs.com)를 통해 참가 신청하실 수 있습니다.',
+    answer: '대회 홈페이지(https://codefestival.hufs.ac.kr)를 통해 참가 신청하실 수 있습니다.',
   },
   {
     id: 'item-2',
