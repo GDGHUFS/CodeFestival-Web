@@ -2,7 +2,7 @@
 
 <img src="https://codefestival.gdghufs.com/static/images/og_image.png" width="100%" height="auto" alt="CodeFestival"/>
 
-Welcome to the web frontend repository for the 2024 Hankuk University of Foreign Studies (HUFS) Code Festival. This
+Welcome to the web frontend repository for the 2024-2025 Hankuk University of Foreign Studies (HUFS) Code Festival. This
 repository includes the code for the landing page, competition archive, and other festival features.
 
 ## Features

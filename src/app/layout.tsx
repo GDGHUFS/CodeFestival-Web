@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/static/favicon/manifest.json',
-  applicationName: '2024 HUFS CodeFestival',
+  applicationName: '2025 HUFS CodeFestival',
 };
 
 export const viewport: Viewport = {
