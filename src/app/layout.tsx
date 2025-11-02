@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     siteName: METADATA.siteName,
     locale: 'ko_KR',
   },
+  verification: {
+    google: 'BQYPxURYOVPi4CagEphl_-CqrCRwEvi3MA6ip0sqvyo'
+  },
   twitter: {
     card: 'summary_large_image',
     title: METADATA.title,
