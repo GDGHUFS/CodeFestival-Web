@@ -9,13 +9,19 @@ type ProvidersProps = {
   children: ReactNode;
 };
 
+const isVercel = process.env.NEXT_PUBLIC_VERCEL === '1';
+
 const Providers = ({ children }: ProvidersProps) => {
   useScreenSize();
 
   return (
     <>
-      <Analytics />
-      <SpeedInsights />
+      {isVercel && (
+        <>
+          <Analytics />
+          <SpeedInsights />
+        </>
+      )}
       {children}
     </>
   );

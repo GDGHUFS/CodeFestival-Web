@@ -43,7 +43,9 @@ loading across the platform.
   <tr>
     <td align="center"><b>deployment</b></td>
     <td>
-      <img src="https://img.shields.io/badge/Vercel-black?style=flat&logo=Vercel&logoColor=white" alt="Vercel" />      
+      <img src="https://img.shields.io/badge/Vercel-black?style=flat&logo=Vercel&logoColor=white" alt="Vercel" /> <i>(used until 2024)</i>
+      <br/>
+      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=Docker&logoColor=white" alt="Docker" /> current self-hosted
     </td>
   </tr>
 </table>
