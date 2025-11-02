@@ -38,11 +38,7 @@ const Dashboard = () => {
             Registration Closed
           </span>
         ) : (
-          <a
-            className={styles.registerLink}
-            href={registrationLink}
-            target="_blank"
-          >
+          <a className={styles.registerLink} href={registrationLink} target="_blank">
             Registration
           </a>
         )}
