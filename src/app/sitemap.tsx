@@ -4,7 +4,7 @@ import { MENU } from '@/constants/menu';
 import { METADATA } from '@/constants/metadata';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const entries = MENU.map((menu) => ({
+  const entries = MENU.map(menu => ({
     url: `${METADATA.url}${menu.href}`,
     ...('date' in menu && { lastModified: menu.date }),
     priority: 0.9,
@@ -16,6 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 1.0,
     },
-    ...entries
+    ...entries,
   ];
 }

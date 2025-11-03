@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     locale: 'ko_KR',
   },
   verification: {
-    google: 'BQYPxURYOVPi4CagEphl_-CqrCRwEvi3MA6ip0sqvyo'
+    google: 'BQYPxURYOVPi4CagEphl_-CqrCRwEvi3MA6ip0sqvyo',
   },
   twitter: {
     card: 'summary_large_image',
