@@ -103,3 +103,10 @@ globalStyle(`${article} td`, {
   border: `1px solid rgba(255, 255, 255, 0.4)`,
   padding: rem(8),
 });
+
+globalStyle(`${article} code`, {
+  border: `1px solid rgba(255, 255, 255, 0.2)`,
+  padding: `${rem(2)} ${rem(4)}`,
+  borderRadius: rem(4),
+  backgroundColor: 'rgba(220, 220, 220, 0.1)',
+});

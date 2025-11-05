@@ -29,7 +29,7 @@ globalStyle(`${organization} > a:hover`, {
 });
 
 export const logo = style({
-  width: rem(230.4),
+  width: 'auto',
   height: rem(25.2),
   userSelect: 'none',
 });
@@ -42,4 +42,11 @@ export const title = style({
   lineHeight: '100%',
   textAlign: 'center',
   userSelect: 'none',
+});
+
+export const sponsorRow = style({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: rem(4),
 });
