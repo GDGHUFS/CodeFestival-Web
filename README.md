@@ -43,7 +43,7 @@ loading across the platform.
   <tr>
     <td align="center"><b>CI/CD</b></td>
     <td>
-      <img src="https://img.shields.io/badge/GitHub Actions-2088FF?logo=GitHub Actions&logoColor=white" alt="GitHub Actions" >
+      <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=GitHub%20Actions&logoColor=white" alt="GitHub Actions" >
     </td>
   </tr>
   <tr>
