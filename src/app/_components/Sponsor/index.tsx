@@ -14,8 +14,8 @@ const Sponsor = ({ className, ...props }: SponsorProps) => {
         <a href="https://soft.hufs.ac.kr/" target="_blank">
           <Image
             className={styles.logo}
-            src="/static/images/ci_ai_education_center.webp"
-            alt="AI Education Center @ HUFS"
+            src="/static/images/ci_ai_education_institute.webp"
+            alt="AI Education Institute @ HUFS"
             width={230.4}
             height={25.2}
             draggable={false}
@@ -37,16 +37,28 @@ const Sponsor = ({ className, ...props }: SponsorProps) => {
       </div>
       <div className={styles.organization}>
         <p className={styles.title}>Our Sponsors</p>
-        <a href="https://www.easyspub.co.kr/" target="_blank">
-          <Image
-            className={styles.logo}
-            src="/static/images/ci_easypub.webp"
-            alt="EasysPublishing Co., Ltd."
-            width={230.4}
-            height={25.2}
-            draggable={false}
-          />
-        </a>
+        <div className={styles.sponsorRow}>
+          <a href="http://jpub.kr/" target="_blank">
+            <Image
+              className={styles.logo}
+              src="/static/images/ci_jpub.webp"
+              alt="Jpub Co., Ltd."
+              width={83.78}
+              height={25.2}
+              draggable={false}
+            />
+          </a>
+          <a href="https://www.easyspub.co.kr/" target="_blank">
+            <Image
+              className={styles.logo}
+              src="/static/images/ci_easypub.webp"
+              alt="EasysPublishing Co., Ltd."
+              width={165.41}
+              height={25.2}
+              draggable={false}
+            />
+          </a>
+        </div>
       </div>
     </section>
   );
