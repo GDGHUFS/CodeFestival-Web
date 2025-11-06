@@ -13,6 +13,14 @@ export const container = style({
   display: 'flex',
 });
 
+export const alert = style({
+  background: '#fff3cd',
+  color: '#856404',
+  padding: `${rem(12)} ${rem(16)}`,
+  borderRadius: rem(8),
+  fontSize: rem(14),
+});
+
 export const article = style({
   width: '100%',
   maxWidth: '100%',

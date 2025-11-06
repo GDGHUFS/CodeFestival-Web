@@ -18,7 +18,7 @@ export default async function Page({ params }: PageProps) {
 
   const filePath = path.join(process.cwd(), 'content/histories', `${id}.mdx`);
   const markdownWithMeta = fs.readFileSync(filePath, 'utf-8');
-  const { content } = matter(markdownWithMeta);
+  const { content, data } = matter(markdownWithMeta);
 
   const toc: TOCType[] = [];
 
@@ -47,7 +47,12 @@ export default async function Page({ params }: PageProps) {
     <Layout>
       <BackButton className={styles.backButton} />
       <div className={styles.container}>
-        <article className={styles.article} dangerouslySetInnerHTML={{ __html: code }} />
+        <article className={styles.article}>
+          {data.archived === true && (
+            <div className={styles.alert}>🕓 이 페이지는 이전 행사의 정보를 담고 있습니다.</div>
+          )}
+          <div dangerouslySetInnerHTML={{ __html: code }} />
+        </article>
         <TableOfContents toc={toc} />
       </div>
     </Layout>
