@@ -49,7 +49,7 @@ export const faq: FaqItem[] = [
     id: 'item-8',
     question: '사용 가능한 프로그래밍 언어는 어떤 것이 있나요?',
     answer:
-      'C (gcc 11.1.0), C++ (g++ 11.1.0), Java (OpenJDK 17.0.12), Python3 (PyPy 7.3.12)를 사용할 수 있습니다.',
+      'C (gcc 12.2.0), C++ (g++ 12.2.0), Java (OpenJDK 17.0.15), Python3 (PyPy 7.3.11)를 사용할 수 있습니다.',
   },
   {
     id: 'item-9',
