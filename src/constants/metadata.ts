@@ -1,6 +1,7 @@
 export const METADATA = {
   title: '2025 HUFS Code Festival',
-  description: '2025 HUFS Code Festival',
+  description:
+    'Join the 2025 HUFS Code Festival — the largest algorithm competition at HUFS. Compete in Beginner or Challenger Tracks and win awards!',
   siteName: '2025 HUFS Code Festival',
   url: 'https://codefestival.hufs.ac.kr',
   email: 'codefestival@gdghufs.com',
