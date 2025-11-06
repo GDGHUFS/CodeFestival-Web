@@ -1,8 +1,17 @@
-import { globalStyle, style } from '@vanilla-extract/css';
+import { globalStyle, style, keyframes } from '@vanilla-extract/css';
 
 import { breakpoint } from '@/styles/responsive.css';
 import { theme } from '@/styles/theme.css';
 import { rem } from '@/utils/pxto';
+
+const flowAnim = keyframes({
+  '0%': {
+    backgroundPosition: '0% 0',
+  },
+  '100%': {
+    backgroundPosition: '200% 0',
+  },
+});
 
 export const root = style({
   ...theme.layouts.columnCenterX,
@@ -74,10 +83,24 @@ export const registerLink = style({
   fontWeight: 500,
   lineHeight: '100%',
   textAlign: 'center',
-  border: `${rem(2)} solid ${theme.colors.white}`,
+  border: `${rem(2)} solid transparent`,
   borderRadius: rem(36),
-  transition: 'color 0.3s, border-color 0.3s, background-color 0.3s',
+  transition: 'color 0.3s ease, border-color 0.8s ease, background-color 0.3s ease',
+  background: `
+    linear-gradient(${theme.colors.black}, ${theme.colors.black}) padding-box,
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.25) 20%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.25) 80%
+    ) border-box
+  `,
+  backgroundOrigin: 'border-box',
+  backgroundClip: 'padding-box, border-box',
+  backgroundSize: '200% auto',
+  animation: `${flowAnim} 6s linear infinite`,
   opacity: 0.9,
+  cursor: 'pointer',
 
   ':hover': {
     color: 'rgba(255, 255, 255, 0.8)',
@@ -87,7 +110,12 @@ export const registerLink = style({
 });
 
 export const registerClosed = style({
+  border: `${rem(2)} solid ${theme.colors.white}`,
+  background: 'none',
+  animation: 'none',
   opacity: 0.5,
+  cursor: 'default',
+
   ':hover': {
     color: theme.colors.white,
     borderColor: theme.colors.white,
