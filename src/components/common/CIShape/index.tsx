@@ -75,7 +75,7 @@ const CIShape = () => {
     <Canvas camera={{ position: [0, 0, 80], fov: 75 }}>
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 10, 7.5]} intensity={0.8} />
-      <Environment preset="sunset" />
+      <Environment path="/static/hdri/" files={'venice_sunset_1k.hdr'} />
       <DShape />
       <OrbitControls enableRotate={false} enableZoom={false} enablePan={false} />
     </Canvas>
