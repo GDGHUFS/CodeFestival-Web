@@ -19,7 +19,7 @@
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "marked": "^14.1.4",
-    "next": "~14.2.33",
+    "next": "~14.2.35",
     "plaiceholder": "^3.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
