@@ -11,7 +11,7 @@ import {
   CodeFestivalApplicationStatus,
   CodeFestivalEvent,
 } from '@/types/application';
-import { formatCodeFestivalDate, getCodeFestivalOptionLabel } from '@/utils/application';
+import { formatSubmittedAt, getCodeFestivalOptionLabel } from '@/utils/application';
 
 import * as adminStyles from '../page.css';
 
@@ -112,7 +112,7 @@ const ApplicationTable = ({
                   {getCodeFestivalOptionLabel(event.trackOptions, application.track)}
                 </span>
               </td>
-              <td>{formatCodeFestivalDate(application.submittedAt)}</td>
+              <td>{formatSubmittedAt(application.submittedAt)}</td>
               <td>
                 {application.availableStatuses.includes('SUBMITTED') ? (
                   <button

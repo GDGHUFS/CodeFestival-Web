@@ -451,4 +451,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Etc
+design/
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,webstorm,web,gatsby,node,windows,webstorm+all,webstorm+iml

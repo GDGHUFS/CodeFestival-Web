@@ -5,7 +5,7 @@ import { ReactNode } from 'react';
 import { CODE_FESTIVAL_APPLICATION_STATUS_LABELS } from '@/constants/application';
 import * as styles from '@/styles/application.css';
 import { CodeFestivalApplication, CodeFestivalEvent } from '@/types/application';
-import { formatCodeFestivalDate, getCodeFestivalOptionLabel } from '@/utils/application';
+import { formatSubmittedAt, getCodeFestivalOptionLabel } from '@/utils/application';
 
 type ApplicationSummaryProps = {
   event: CodeFestivalEvent;
@@ -29,7 +29,7 @@ const ApplicationSummary = ({
     <div className={styles.summarySections}>
       <SummarySection title="접수 정보">
         <Metadata label="접수 번호" value={application.id} />
-        <Metadata label="접수 시각" value={formatCodeFestivalDate(application.submittedAt)} />
+        <Metadata label="접수 시각" value={formatSubmittedAt(application.submittedAt)} />
       </SummarySection>
       <SummarySection title="신청자 정보">
         <Metadata label="이름" value={application.name} />

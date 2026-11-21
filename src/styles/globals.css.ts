@@ -6,6 +6,10 @@ import './reset.css';
 
 globalStyle(':root', {
   colorScheme: 'dark',
+
+  '@media': {
+    '(prefers-color-scheme: dark)': { colorScheme: 'dark' },
+  },
 });
 
 globalStyle('html', {

@@ -6,17 +6,17 @@ type ImagePlaceholderProps = Omit<ImageProps, 'src'> & {
   src: string;
 };
 
-const ImagePlaceholder = async ({ src, ...props }: ImagePlaceholderProps) => {
+const ImagePlaceholder = async ({ src, alt, ...props }: ImagePlaceholderProps) => {
   const { base64, img } = await getBase64(src);
 
   if (props.fill) {
-    return <Image src={src} alt={src} placeholder="blur" blurDataURL={base64} {...props} />;
+    return <Image src={src} alt={alt} placeholder="blur" blurDataURL={base64} {...props} />;
   }
 
   return (
     <Image
       src={src}
-      alt={src}
+      alt={alt}
       width={img.width}
       height={img.height}
       sizes="65vw"

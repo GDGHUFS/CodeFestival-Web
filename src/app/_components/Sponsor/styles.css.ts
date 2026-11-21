@@ -18,13 +18,13 @@ export const organization = style({
   gap: rem(16),
 });
 
-globalStyle(`${organization} > a`, {
+globalStyle(`${organization} a`, {
   textDecoration: 'none',
   opacity: 1,
   transition: 'opacity 0.2s',
 });
 
-globalStyle(`${organization} > a:hover`, {
+globalStyle(`${organization} a:hover`, {
   opacity: 0.8,
 });
 
@@ -44,9 +44,12 @@ export const title = style({
   userSelect: 'none',
 });
 
-export const sponsorRow = style({
+export const logoRow = style({
   display: 'flex',
+  flexWrap: 'wrap',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: rem(4),
+  gap: `${rem(12)} ${rem(20)}`,
+
+  ...breakpoint({ tablet: { flexWrap: 'nowrap', columnGap: rem(32) } }),
 });

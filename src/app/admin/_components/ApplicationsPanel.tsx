@@ -12,7 +12,7 @@ import {
   CodeFestivalApplicationStatus,
   CodeFestivalEvent,
 } from '@/types/application';
-import { formatCodeFestivalDate, getCodeFestivalOptionLabel } from '@/utils/application';
+import { formatSubmittedAt, getCodeFestivalOptionLabel } from '@/utils/application';
 
 import ApplicationTable from './ApplicationTable';
 import * as styles from '../page.css';
@@ -243,7 +243,7 @@ const exportCsv = (event: CodeFestivalEvent, applications: CodeFestivalApplicati
       getCodeFestivalOptionLabel(event.enrollmentStatusOptions, application.enrollmentStatus),
       getCodeFestivalOptionLabel(event.participationCampusOptions, application.participationCampus),
       getCodeFestivalOptionLabel(event.trackOptions, application.track),
-      formatCodeFestivalDate(application.submittedAt),
+      formatSubmittedAt(application.submittedAt),
     ]),
   ];
   const csv = rows.map(row => row.map(csvCell).join(',')).join('\r\n');

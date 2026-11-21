@@ -16,12 +16,43 @@ export const title = style({
   ...breakpoint({ tablet: { fontSize: rem(32) } }),
 });
 
+export const tabList = style({
+  ...theme.layouts.centerX,
+  marginTop: rem(24),
+  gap: rem(8),
+});
+
+export const tab = style({
+  paddingBlock: rem(6),
+  paddingInline: rem(12),
+  color: theme.colors.white40,
+  fontFamily: 'var(--font-jetbrains)',
+  fontSize: rem(15),
+  fontWeight: 600,
+  borderBottom: `${rem(2)} solid transparent`,
+  cursor: 'pointer',
+  transition: 'color 0.2s, border-color 0.2s',
+
+  selectors: {
+    '&:hover': { color: theme.colors.white70 },
+    '&[aria-selected="true"]': {
+      color: theme.colors.white,
+      borderBottomColor: theme.colors.white,
+    },
+    '&:focus-visible': {
+      outline: `${rem(2)} solid ${theme.colors.white60}`,
+      outlineOffset: rem(2),
+    },
+  },
+});
+
 export const grid = style({
   position: 'relative',
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
   width: '100%',
-  paddingBlock: rem(38),
+  paddingTop: rem(24),
+  paddingBottom: rem(38),
   paddingInline: theme.sizes.appInlinePadding,
   gap: rem(24),
 

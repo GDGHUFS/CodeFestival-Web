@@ -1,10 +1,13 @@
 'use client';
+import { clsx } from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment, useState } from 'react';
 
 import { MENU } from '@/constants/menu';
 import { useCurrentEvent } from '@/contexts/CurrentEventContext';
+import { useRevealOnLoad } from '@/hooks/useRevealOnLoad';
+import { revealAfterLoad } from '@/styles/skeleton.css';
 
 import MobileMenu from './MobileMenu';
 import * as styles from './styles.css';
@@ -12,6 +15,7 @@ import * as styles from './styles.css';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const { event, loading } = useCurrentEvent();
+  const revealOnLoad = useRevealOnLoad(loading);
   const menu = event
     ? [{ title: event.title, href: `/festival/${encodeURIComponent(event.edition)}` }, ...MENU]
     : MENU;
@@ -25,8 +29,15 @@ const Header = () => {
           </Link>
           <nav className={styles.navigation}>
             {loading && <span className={styles.menuSkeleton} aria-hidden />}
-            {menu.map(menuItem => (
-              <Link className={styles.menu} href={menuItem.href} key={menuItem.href}>
+            {menu.map((menuItem, index) => (
+              <Link
+                className={clsx(
+                  styles.menu,
+                  revealOnLoad && event && index === 0 && revealAfterLoad,
+                )}
+                href={menuItem.href}
+                key={menuItem.href}
+              >
                 {menuItem.title}
               </Link>
             ))}

@@ -45,21 +45,34 @@ globalStyle(`${article} h1`, {
 });
 
 globalStyle(`${article} h2`, {
-  fontSize: rem(32),
-  fontWeight: 600,
-  marginTop: rem(32),
+  fontSize: rem(30),
+  fontWeight: 700,
+  marginTop: rem(80),
+});
+
+globalStyle(`${article} h2:first-child`, {
+  marginTop: 0,
 });
 
 globalStyle(`${article} h3`, {
-  fontSize: rem(24),
-  fontWeight: 600,
-  marginTop: rem(24),
+  fontSize: rem(22),
+  fontWeight: 700,
+  marginTop: rem(48),
+});
+
+globalStyle(`${article} hr + h3`, {
+  marginTop: rem(28),
 });
 
 globalStyle(`${article} h4`, {
-  fontSize: rem(20),
+  fontSize: rem(17),
   fontWeight: 600,
-  marginTop: rem(20),
+  marginTop: rem(32),
+  color: theme.colors.white70,
+});
+
+globalStyle(`${article} :is(h3, h4) + :is(p, ul, ol, table, blockquote)`, {
+  marginTop: rem(12),
 });
 
 globalStyle(`${article} p`, {
@@ -88,10 +101,48 @@ globalStyle(`${article} ul, ${article} ol`, {
   marginTop: rem(16),
 });
 
+globalStyle(`${article} ul`, {
+  listStyle: 'disc',
+});
+
+globalStyle(`${article} ol`, {
+  listStyle: 'decimal',
+});
+
+globalStyle(`${article} li ul`, {
+  listStyle: 'circle',
+});
+
+globalStyle(`${article} li :is(ul, ol)`, {
+  marginTop: 0,
+});
+
 globalStyle(`${article} li`, {
   fontSize: rem(16),
   marginTop: rem(8),
   lineHeight: 1.6,
+});
+
+globalStyle(`${article} li::marker`, {
+  color: theme.colors.white60,
+});
+
+globalStyle(`${article} hr`, {
+  height: 0,
+  marginTop: rem(12),
+  border: 'none',
+  borderTop: `${rem(1)} solid ${theme.colors.white20}`,
+});
+
+globalStyle(`${article} blockquote`, {
+  marginTop: rem(16),
+  paddingLeft: rem(16),
+  color: theme.colors.white80,
+  borderLeft: `${rem(3)} solid ${theme.colors.white40}`,
+});
+
+globalStyle(`${article} blockquote p`, {
+  marginTop: 0,
 });
 
 globalStyle(`${article} table`, {
@@ -112,9 +163,15 @@ globalStyle(`${article} td`, {
   padding: rem(8),
 });
 
-globalStyle(`${article} code`, {
+globalStyle(`${article} time`, {
+  whiteSpace: 'nowrap',
+});
+
+globalStyle(`${article} :is(code, time)`, {
   border: `1px solid rgba(255, 255, 255, 0.2)`,
   padding: `${rem(2)} ${rem(4)}`,
+  fontFamily: 'var(--font-jetbrains)',
+  fontSize: '0.9em',
   borderRadius: rem(4),
   backgroundColor: 'rgba(220, 220, 220, 0.1)',
 });

@@ -49,7 +49,7 @@ export const directLink = style({
 
 export const directLinkPlaceholder = style({
   display: 'block',
-  width: rem(220),
+  width: rem(240),
   height: rem(25),
   marginTop: rem(20),
   marginInline: 'auto',

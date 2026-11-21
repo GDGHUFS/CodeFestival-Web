@@ -1,17 +1,17 @@
 # HUFS CodeFestival
 
-<img src="https://codefestival.hufs.ac.kr/static/images/og_image.png" width="100%" height="auto" alt="CodeFestival"/>
+<img src="https://codefestival.hufs.ac.kr/static/images/og_image_8.png" width="100%" height="auto" alt="CodeFestival"/>
 
-Welcome to the web frontend repository for the 2024-2025 Hankuk University of Foreign Studies (HUFS) Code Festival. This
+Welcome to the web frontend repository for the 2024-2026 Hankuk University of Foreign Studies (HUFS) CodeFestival. This
 repository includes the code for the landing page, competition archive, and other festival features.
 
 ## Features
 
-- **Landing Page for Registration**: A dedicated page for participants to sign up for the Code Festival.
+- **Landing Page for Registration**: A dedicated page for participants to sign up for HUFS CodeFestival.
 - **Competition Details**: Detailed event information, such as schedules, categories, and judging criteria.
 - **FAQ Page**: Answers to common questions to help participants navigate the event smoothly.
 - **Gallery**: A section showcasing event highlights, previous competitions, and participant achievements, providing a
-  glimpse into the Code Festival experience.
+  glimpse into the HUFS CodeFestival experience.
 
 These pages leverage Next.js's `Intercepting Routes` and `Parallel Routes`, allowing for greater flexibility in
 navigation and page rendering. This architecture ensures that users experience seamless transitions and efficient data

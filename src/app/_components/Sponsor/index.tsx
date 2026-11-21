@@ -14,8 +14,8 @@ const Sponsor = ({ className, ...props }: SponsorProps) => {
         <a href="https://soft.hufs.ac.kr/" target="_blank">
           <Image
             className={styles.logo}
-            src="/static/images/ci_ai_education_institute.webp"
-            alt="AI Education Institute @ HUFS"
+            src="/static/images/ci_ai_education_division.webp"
+            alt="AI Education Division @ HUFS"
             width={230.4}
             height={25.2}
             draggable={false}
@@ -24,41 +24,41 @@ const Sponsor = ({ className, ...props }: SponsorProps) => {
       </div>
       <div className={styles.organization}>
         <p className={styles.title}>Organized by</p>
-        <a href="https://gdg.hufs.ac.kr/" target="_blank">
-          <Image
-            className={styles.logo}
-            src="/static/images/ci_gdghufs.webp"
-            alt="GDG on Campus HUFS"
-            width={230.4}
-            height={25.2}
-            draggable={false}
-          />
-        </a>
-      </div>
-      <div className={styles.organization}>
-        <p className={styles.title}>Our Sponsors</p>
-        <div className={styles.sponsorRow}>
-          <a href="http://jpub.kr/" target="_blank">
+        <div className={styles.logoRow}>
+          <a href="https://gdg.hufs.ac.kr/" target="_blank">
             <Image
               className={styles.logo}
-              src="/static/images/ci_jpub.webp"
-              alt="Jpub Co., Ltd."
-              width={83.78}
+              src="/static/images/ci_gdghufs.svg"
+              alt="GDG on Campus HUFS"
+              width={204.98}
               height={25.2}
               draggable={false}
             />
           </a>
-          <a href="https://www.easyspub.co.kr/" target="_blank">
+          <a href="https://code.hufs.ac.kr/" target="_blank">
             <Image
               className={styles.logo}
-              src="/static/images/ci_easypub.webp"
-              alt="EasysPublishing Co., Ltd."
-              width={165.41}
+              src="/static/images/ci_hufstory.svg"
+              alt="HUFSTORY"
+              width={109.11}
               height={25.2}
               draggable={false}
             />
           </a>
         </div>
+      </div>
+      <div className={styles.organization}>
+        <p className={styles.title}>Our Sponsors</p>
+        <a href="https://www.hanbit.co.kr/" target="_blank">
+          <Image
+            className={styles.logo}
+            src="/static/images/ci_hanbit.svg"
+            alt="Hanbit+"
+            width={79.3}
+            height={25.2}
+            draggable={false}
+          />
+        </a>
       </div>
     </section>
   );

@@ -4,17 +4,21 @@ import { rem } from '@/utils/pxto';
 
 export const theme = createGlobalTheme(':root', {
   colors: {
-    black: '#000105',
+    black: '#08090C',
     white: '#FFFFFF',
     white05: 'rgba(255, 255, 255, 0.05)',
     white10: 'rgba(255, 255, 255, 0.1)',
     white20: 'rgba(255, 255, 255, 0.2)',
+    white40: 'rgba(255, 255, 255, 0.4)',
     white60: 'rgba(255, 255, 255, 0.6)',
     white70: 'rgba(255, 255, 255, 0.7)',
     white80: 'rgba(255, 255, 255, 0.8)',
     white90: 'rgba(255, 255, 255, 0.9)',
 
     primary: '#7D8296',
+    accent: '#FCFC33',
+    lineNumber: '#707070',
+    gridDot: 'rgba(255, 255, 255, 0.16)',
   },
 
   spaces: {

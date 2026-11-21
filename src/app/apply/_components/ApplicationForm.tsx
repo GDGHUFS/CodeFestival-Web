@@ -134,9 +134,21 @@ const ApplicationForm = ({
               target="_blank"
               rel="noreferrer"
             >
-              본인은 본 대회의 대회 일정, 사용 가능한 프로그래밍 언어 및 기타 관련 규정을
-              확인했습니다.
+              본인은 본 대회의 대회 일정 및 관련 규정을 확인했습니다.
             </Link>
+          }
+        />
+        <Confirmation
+          name="platformJoined"
+          text={
+            <a
+              className={styles.textButton}
+              href="https://code.hufs.ac.kr/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              본인은 본 대회 플랫폼인 HUFS CODE MASTER에 가입하였음을 확인했습니다.
+            </a>
           }
         />
         <Confirmation
@@ -145,7 +157,7 @@ const ApplicationForm = ({
         />
         <Confirmation
           name="noShowConfirmed"
-          text="본인은 참가자 확정 이후 정당한 사유 없이 행사에 불참할 경우, 향후 GDG on Campus HUFS가 주관하는 다른 행사 참여에 제한 또는 불이익이 있을 수 있음을 확인했습니다."
+          text="본인은 참가자 확정 이후 정당한 사유 없이 행사에 불참할 경우, 향후 다른 행사 참여에 제한 또는 불이익이 있을 수 있음을 확인했습니다."
         />
       </div>
       <div className={clsx(styles.actions, styles.submitActions)}>

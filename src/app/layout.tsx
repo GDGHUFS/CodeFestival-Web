@@ -2,7 +2,7 @@ import '@/styles/globals.css';
 
 import { clsx } from 'clsx';
 import { Metadata, Viewport } from 'next';
-import { JetBrains_Mono } from 'next/font/google';
+import { Courier_Prime, JetBrains_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import Providers from '@/app/providers';
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/static/images/og_image.png',
+        url: METADATA.ogImage,
         width: 1200,
         height: 630,
         alt: METADATA.title,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: METADATA.description,
     images: [
       {
-        url: '/static/images/og_image.png',
+        url: METADATA.ogImage,
         alt: METADATA.title,
       },
     ],
@@ -66,8 +66,17 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#000105',
+  themeColor: '#08090C',
+  colorScheme: 'dark',
 };
+
+const courierPrime = Courier_Prime({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '700',
+  preload: true,
+  variable: '--font-courier-prime',
+});
 
 const jetbrains = JetBrains_Mono({
   subsets: ['latin'],
@@ -88,7 +97,7 @@ const pretendard = localFont({
 export default function RootLayout({ children, modal }: LayoutProps<'/'>) {
   return (
     <html lang="ko">
-      <body className={clsx(pretendard.variable, jetbrains.variable)}>
+      <body className={clsx(pretendard.variable, jetbrains.variable, courierPrime.variable)}>
         <Providers>
           {children}
           {modal}

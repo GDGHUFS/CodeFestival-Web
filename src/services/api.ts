@@ -61,8 +61,13 @@ const request = async <T>(path: string, init?: RequestInit, authenticated = fals
   return payload.data;
 };
 
+const createLoginState = () =>
+  Array.from(crypto.getRandomValues(new Uint8Array(16)), byte =>
+    byte.toString(16).padStart(2, '0'),
+  ).join('');
+
 export const beginCodeFestivalLogin = (returnTo = '/apply') => {
-  const state = crypto.randomUUID();
+  const state = createLoginState();
   sessionStorage.setItem(LOGIN_STATE_KEY, state);
   sessionStorage.setItem(LOGIN_RETURN_TO_KEY, returnTo);
   window.location.assign(

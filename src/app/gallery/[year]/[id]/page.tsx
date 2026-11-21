@@ -4,7 +4,7 @@ import { clsx } from 'clsx';
 import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
 
-import { GALLERY } from '@/constants/gallery';
+import { findGalleryItem } from '@/constants/gallery';
 
 import * as styles from './page.css';
 
@@ -12,7 +12,7 @@ export default function Page() {
   const { year, id } = useParams<{ year: string; id: string }>();
   const router = useRouter();
 
-  const image = GALLERY[Number(year)]?.[id];
+  const image = findGalleryItem(year, id);
 
   if (!image) return null;
 
