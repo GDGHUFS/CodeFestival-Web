@@ -66,7 +66,7 @@ export const beginCodeFestivalLogin = (returnTo = '/apply') => {
   sessionStorage.setItem(LOGIN_STATE_KEY, state);
   sessionStorage.setItem(LOGIN_RETURN_TO_KEY, returnTo);
   window.location.assign(
-    `${API_BASE_URL}/v1/codefestival/auth/login?state=${encodeURIComponent(state)}`,
+    new URL(`${API_BASE_URL}/v1/codefestival/auth/login?state=${encodeURIComponent(state)}`),
   );
 };
 
